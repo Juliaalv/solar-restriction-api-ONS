@@ -164,7 +164,7 @@ def main(tipo=None, ano=None, meses=None):
 
 
 if __name__ == "__main__":
-    tipo = None  # ← CORRIGIDO: Agora começa como None
+    tipo = None  
     ano = None
     meses = None
     
