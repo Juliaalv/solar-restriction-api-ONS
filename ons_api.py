@@ -42,13 +42,13 @@ def main(tipo=None, ano=None, meses=None):
         elif opcao == "2":
             tipo = "eolica"
         else:
-            print("❌ Opção inválida")
+            print(" Opção inválida")
             return
     
     # Validar tipo
     tipo = tipo.lower()
     if tipo not in config:
-        print(f"❌ Tipo deve ser: fotovoltaica ou eolica")
+        print(f" Tipo deve ser: fotovoltaica ou eolica")
         print(f"Digite: python baixar_ons.py --tipo eolica --ano 2025 --meses 1-12")
         return
     
@@ -72,7 +72,7 @@ def main(tipo=None, ano=None, meses=None):
         try:
             ano = int(input(f"\nQual ano você quer? (ex: 2025): "))
         except ValueError:
-            print("❌ Ano inválido")
+            print("Ano inválido")
             return
     
     if meses is None:
@@ -95,7 +95,7 @@ def main(tipo=None, ano=None, meses=None):
     meses = sorted(set([m for m in meses if 1 <= m <= 12]))
     
     if not meses:
-        print("❌ Nenhum mês válido")
+        print("Nenhum mês válido")
         return
     
     # Criar pasta do ano
